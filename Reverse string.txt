@@ -1,0 +1,5 @@
+#! /bin/Bash
+echo "enter a string"
+read input_string
+reversed_string=$(echo "$input_string" | rev)
+echo "reversed string: $reversed_string"
