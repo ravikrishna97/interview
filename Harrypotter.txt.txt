@@ -1,0 +1,18 @@
+#! /bin/bash
+file="harry.txt"
+if [ -f "$file" ]; then
+count=$(grep -o "Harry" "$file" | wc -l)
+line_count=$(wc -l < "$file")
+word_count=$(wc -w < "$file")
+char_count=$(wc -m < "$file")
+echo "the word harry appears $count times in the file"
+echo "the files has $line_count lines"
+echo "the file has $word_count words"
+echo "the file has $char_count characters"
+
+else 
+echo "file doesn't exist"
+for i in {1..5}; do 
+  echo "Harry" >> "$file"
+ done
+fi
