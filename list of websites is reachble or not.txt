@@ -1,0 +1,10 @@
+#! /bin/bash
+websites=("google.com" "github.com")
+for website in "${websites[@]}"
+do
+if curl -s --head --request GET "https://$website" | grep "200 OK" > /dev/null; then
+echo "$website is reachable"
+else
+echo "$website is not reachable"
+fi
+done
