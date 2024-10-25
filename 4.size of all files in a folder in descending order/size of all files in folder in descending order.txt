@@ -1,5 +1,0 @@
-#! /bin/Bash
-
-folder="${1:-.}"
- 
- du -ah "$folder" | sort -rh | grep -v '^d'
